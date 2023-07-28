@@ -19,3 +19,30 @@ Clone the repository to your Ubuntu device using `git`.
 ```shell
 git clone git@github.com:geekros/rosbridge_suite.git
 ```
+
+## Build
+
+```shell
+cd rosbridge_suite
+```
+
+```shell
+colcon build --packages-select rosapi_msgs
+colcon build --packages-select rosbridge_msgs
+colcon build --packages-select rosbridge_test_msgs
+colcon build --packages-select rosbridge_library
+colcon build --packages-select rosapi
+colcon build --packages-select rosbridge_server
+colcon build --packages-select rosbridge_suite
+```
+
+## Publishing a Debian (deb) software package.
+
+```shell
+cd rosbridge_suite
+```
+
+```shell
+robotchain ubuntu pack
+robotchain ubuntu publish
+```
