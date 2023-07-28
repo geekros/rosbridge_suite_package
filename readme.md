@@ -1,5 +1,5 @@
 # 🤖 Rosbridge Suite
 
-⚡ Welcome to the new world of general artificial intelligence and general robotics. ⚡
+⚡ rosbridge_suite package for robotchain compatible with ROS2. ⚡
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
