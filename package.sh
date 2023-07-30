@@ -12,18 +12,10 @@ if [ ! -f "$filename" ]; then
 fi
 
 type=$(jq -r ".type" "$filename")
-if [ -z "$type" ]; then
-    exit 0
-fi
-
 title=$(jq -r ".title" "$filename")
-if [ -z "$title" ]; then
-    exit 0
-fi
-
 version=$(jq -r ".version" "$filename")
-if [ -z "$version" ]; then
-    exit 0
+if [ -z "$type" ] || [ -z "$title" ] || [ -z "$version" ]; then
+  exit 1
 fi
 
 if [ ! -d "debian" ]; then
@@ -74,6 +66,7 @@ sudo cp -r install/rosbridge_test_msgs/share/* debian/opt/tros/share/
 
 sudo touch debian/DEBIAN/control && sudo chmod +x debian/DEBIAN/control
 standard_package_name=$(echo "$title" | tr "_" "-")
+standard_package_name=$(echo "$standard_package_name" | tr '[:upper:]' '[:lower:]')
 name_str="Package: $standard_package_name"
 export name_str
 sudo -E sh -c 'echo $name_str >> debian/DEBIAN/control'
