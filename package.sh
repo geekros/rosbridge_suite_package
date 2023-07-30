@@ -26,18 +26,6 @@ if [ -z "$version" ]; then
     exit 0
 fi
 
-echo -e "\033[32mStarting to build the deb software package for you...\033[0m"
-
-colcon build --packages-select rosapi_msgs
-colcon build --packages-select rosbridge_msgs
-colcon build --packages-select rosbridge_test_msgs
-colcon build --packages-select rosbridge_library
-colcon build --packages-select rosapi
-colcon build --packages-select rosbridge_server
-colcon build --packages-select rosbridge_suite
-
-echo -e "\033[32mPublishing the deb software package to the software repository server for you...\033[0m"
-
 if [ ! -d "debian" ]; then
     mkdir -p debian
     mkdir -p debian/DEBIAN
@@ -54,6 +42,18 @@ else
     mkdir -p debian/opt/tros/lib
     mkdir -p debian/opt/tros/include
 fi
+
+echo -e "\033[32mStarting to build the deb software package for you...\033[0m"
+
+colcon build --packages-select rosapi_msgs
+colcon build --packages-select rosbridge_msgs
+colcon build --packages-select rosbridge_test_msgs
+colcon build --packages-select rosbridge_library
+colcon build --packages-select rosapi
+colcon build --packages-select rosbridge_server
+colcon build --packages-select rosbridge_suite
+
+echo -e "\033[32mPublishing the deb software package to the software repository server for you...\033[0m"
 
 sudo cp -r install/rosapi/lib/* debian/opt/tros/lib/
 sudo cp -r install/rosapi/share/* debian/opt/tros/share/
