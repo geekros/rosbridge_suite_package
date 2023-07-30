@@ -36,7 +36,7 @@ sudo ./package.sh
 ## 📖 Install
 
 ```shell
-sudo apt install rosbridge_suite_package
+sudo apt install rosbridge-suite-package
 ```
 
 ## 🌞 Development Team
