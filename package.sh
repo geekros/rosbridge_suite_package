@@ -13,17 +13,17 @@ fi
 
 type=$(jq -r ".type" "$filename")
 if [ -z "$type" ]; then
-    exit 1
+    exit 0
 fi
 
 title=$(jq -r ".title" "$filename")
 if [ -z "$title" ]; then
-    exit 1
+    exit 0
 fi
 
 version=$(jq -r ".version" "$filename")
 if [ -z "$version" ]; then
-    exit 1
+    exit 0
 fi
 
 echo -e "\033[32mStarting to build the deb software package for you...\033[0m"
