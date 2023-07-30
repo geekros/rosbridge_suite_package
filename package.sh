@@ -75,7 +75,7 @@ sudo cp -r install/rosbridge_test_msgs/share/* debian/opt/tros/share/
 sudo touch debian/DEBIAN/control && sudo chmod +x debian/DEBIAN/control
 name_str="Package: title"
 export name_str
-sudo -E sh -c 'echo name_str >> debian/DEBIAN/control'
+sudo -E sh -c 'echo $name_str >> debian/DEBIAN/control'
 version_str="Version: $version"
 export version_str
 sudo -E sh -c 'echo $version_str >> debian/DEBIAN/control'
