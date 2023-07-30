@@ -17,6 +17,7 @@
 ```shell
 sudo curl -s https://cdn.geekros.com/robotchain/install.sh|bash
 ```
+
 > 使用git克隆仓库到Ubuntu设备。
 > 
 > Clone the repository to your Ubuntu device using `git`.
@@ -51,14 +52,14 @@ cd rosbridge_suite
 >Packaging into a `deb` file.
 
 ```shell
-robotchain pack
+robotchain package pack
 ```
 > 发布deb到软件源
 > 
 > Publishing the `deb` to a software repository.
 
 ```shell
-robotchain publish
+robotchain package publish
 ```
 
 ## 📖 Install

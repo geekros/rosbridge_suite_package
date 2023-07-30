@@ -1,0 +1,9 @@
+{
+    "type": "package",
+    "title": "rosbridge_suite_package",
+    "document": {
+        "git": "https://github.com/geekros/rosbridge_suite_package",
+        "wiki": ""
+    },
+    "version": "1.0.0"
+}
