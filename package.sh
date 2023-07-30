@@ -85,6 +85,5 @@ sudo sh -c 'echo "Description: robotchain and robot" >> debian/DEBIAN/control'
 
 sudo dpkg --build debian/ && dpkg-name debian.deb
 
-sudo rm -rf debian
-
-robotchain package
+# shellcheck disable=SC2035
+sudo rm -rf debian && robotchain package && sudo rm -rf *.deb
