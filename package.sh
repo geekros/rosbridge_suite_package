@@ -6,7 +6,7 @@ lsb_release -a
 
 architecture=$(dpkg --print-architecture)
 
-filename=".robotchain/package.json"
+filename=".robotchain/config.robotchain"
 if [ ! -f "$filename" ]; then
     exit 0
 fi
