@@ -51,7 +51,7 @@ cd rosbridge_suite
 >Packaging into a `deb` file.
 
 ```shell
-robotchain pack package
+robotchain pack
 ```
 > 发布deb到软件源
 > 
