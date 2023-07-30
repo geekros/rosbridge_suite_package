@@ -73,7 +73,7 @@ sudo cp -r install/rosbridge_test_msgs/include/* debian/opt/tros/include/
 sudo cp -r install/rosbridge_test_msgs/share/* debian/opt/tros/share/
 
 sudo touch debian/DEBIAN/control && sudo chmod +x debian/DEBIAN/control
-standard_package_name=$(echo "$title" | tr -cd "[:lower:][:digit:]+.-")
+standard_package_name=$(echo "$title" | tr "_" "-")
 name_str="Package: $standard_package_name"
 export name_str
 sudo -E sh -c 'echo $name_str >> debian/DEBIAN/control'
