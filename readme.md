@@ -1,4 +1,4 @@
-# 🤖 Rosbridge Suite
+# 🤖 Rosbridge Suite Package
 
 ⚡ rosbridge_suite package for robotchain compatible with ROS2. ⚡
 
@@ -23,13 +23,13 @@ sudo curl -s https://cdn.geekros.com/robotchain/install.sh|bash
 > Clone the repository to your Ubuntu device using `git`.
 
 ```shell
-git clone git@github.com:geekros/rosbridge_suite.git
+git clone git@github.com:geekros/rosbridge_suite_package.git
 ```
 
 ## 📖 Publishing a Debian (deb) software package.
 
 ```shell
-cd rosbridge_suite
+cd rosbridge_suite_package
 sudo ./package.sh
 ```
 
