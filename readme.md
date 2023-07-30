@@ -26,40 +26,11 @@ sudo curl -s https://cdn.geekros.com/robotchain/install.sh|bash
 git clone git@github.com:geekros/rosbridge_suite.git
 ```
 
-## 📖 Build
-
-```shell
-cd rosbridge_suite
-```
-
-```shell
-colcon build --packages-select rosapi_msgs
-colcon build --packages-select rosbridge_msgs
-colcon build --packages-select rosbridge_test_msgs
-colcon build --packages-select rosbridge_library
-colcon build --packages-select rosapi
-colcon build --packages-select rosbridge_server
-colcon build --packages-select rosbridge_suite
-```
-
 ## 📖 Publishing a Debian (deb) software package.
 
 ```shell
 cd rosbridge_suite
-```
-> 打包为deb文件
-> 
->Packaging into a `deb` file.
-
-```shell
-robotchain package pack
-```
-> 发布deb到软件源
-> 
-> Publishing the `deb` to a software repository.
-
-```shell
-robotchain package publish
+sudo ./package.sh
 ```
 
 ## 📖 Install
