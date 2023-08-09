@@ -1,6 +1,7 @@
 {
     "type": "package",
     "title": "rosbridge_suite_package",
+    "describe": "rosbridge_suite package for robotchain compatible with ROS2.",
     "document": {
         "git": "https://github.com/geekros/rosbridge_suite_package",
         "wiki": ""
