@@ -25,6 +25,7 @@ if [ ! -d "debian" ]; then
     mkdir -p debian/opt/tros/share
     mkdir -p debian/opt/tros/lib
     mkdir -p debian/opt/tros/include
+    mkdir -P debian/opt/robotchain/manager
 else
     sudo rm -rf debian
     mkdir -p debian
@@ -33,6 +34,7 @@ else
     mkdir -p debian/opt/tros/share
     mkdir -p debian/opt/tros/lib
     mkdir -p debian/opt/tros/include
+    mkdir -P debian/opt/robotchain/manager
 fi
 
 echo -e "\033[32mStarting to build the deb software package for you...\033[0m"
@@ -46,6 +48,8 @@ colcon build --packages-select rosbridge_server
 colcon build --packages-select rosbridge_suite
 
 echo -e "\033[32mPublishing the deb software package to the software repository server for you...\033[0m"
+
+sudo cp -r .robotchain debian/opt/robotchain/manager/"${type}"/"${title}"/
 
 sudo cp -r install/rosapi/lib/* debian/opt/tros/lib/
 sudo cp -r install/rosapi/share/* debian/opt/tros/share/
